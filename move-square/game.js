@@ -14,12 +14,12 @@ Game.start = () =>  {
 document.addEventListener('DOMContentLoaded', Game.start); 
 
 Game.update =  () => {
-  Game.rectanglePosition = Game.canvas.width - new Date().getTime() % Game.canvas.width;
+  Game.rectanglePosition = new Date().getTime() % Game.canvas.height;
  };
 
 Game.draw = () => { 
   Game.canvasContext.fillStyle = "blue"; 
-  Game.canvasContext.fillRect(Game.rectanglePosition, 100, 50, 50); 
+  Game.canvasContext.fillRect(100, Game.rectanglePosition, 50, 50); 
 } ;
 
 Game.clearCanvas = function () {

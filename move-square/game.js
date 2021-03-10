@@ -14,7 +14,7 @@ Game.start = () =>  {
 document.addEventListener('DOMContentLoaded', Game.start); 
 
 Game.update =  () => {
-  Game.rectanglePosition = new Date().getTime() % Game.canvas.width;
+  Game.rectanglePosition = Game.canvas.width - new Date().getTime() % Game.canvas.width;
  };
 
 Game.draw = () => { 

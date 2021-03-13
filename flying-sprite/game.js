@@ -10,7 +10,8 @@ var Game = {
   balloonPosition: {x: 0, y: 50},
   balloonPosition1: {x: 0, y: 80},
   balloonPosition2: {x: 0, y: 120},
-  balloonPosition3: {x: 0, y: 150}
+  balloonPosition3: {x: 0, y: 150},
+  backgroundMusic: undefined
 };
 
 Game.start = () =>  { 
@@ -26,6 +27,10 @@ Game.start = () =>  {
   Game.balloonSprinte3.src = "sprites/spr_balloon.png";
   Game.backgroundSprite = new Image();
   Game.backgroundSprite.src = "sprites/spr_background.jpg";
+  Game.backgroundMusic = new Audio();
+  Game.backgroundMusic.src = "snd_music.mp3";
+  Game.backgroundMusic.play();
+  Game.backgroundMusic.volume = 0.4;
   window.setTimeout(Game.mainLoop, 500);
 } ;
 
